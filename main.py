@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
 
-"""
-Record audio from microphone to detect hotword "jarvis"
-"""
-
 import os
 import time
 import wave
@@ -28,7 +24,7 @@ KEYWORDS = ["jarvis", "bumblebee"]
 rp = Responder()
 pa = pyaudio.PyAudio()
 pl = MPyg321Player()
-ai = wit.Wit(os.getenv('WITAI_TOKEN'))
+ai = wit.Wit(os.getenv("WITAI_TOKEN"))
 porcupine = pvporcupine.create(keywords=KEYWORDS)
 
 sample_rate = porcupine.sample_rate
